@@ -2,9 +2,9 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Webshortcututil : Web Shortcut Utilities" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Webshortcututil : Web Shortcut Utilities">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -32,36 +32,100 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a id="webshortcututil-suite" class="anchor" href="#webshortcututil-suite" aria-hidden="true"><span class="octicon octicon-link"></span></a>WebshortcutUtil Suite</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>This is a suite of libraries and tools for working with web shortcuts.
+Web shortcuts are the files that are created by various operating systems when you save
+a link to a website.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p>I have found myself using various operating systems over the years, and I also
+have been increasingly using cloud file services.  I sometimes work in one
+operating system, create a shortcut, put the shortcut on a cloud service, then try
+to open the shortcut in another operating system.  This generally does not work.
+There are workarounds such as opening the shortcuts with a text editor and copying the
+URL, or using link services such as Delicious.</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>I decided to try and create a set of applications and libraries that would allow you to
+open any shortcut regardless of which operating system you are using.  A major goal was
+to gain experience using various programming languages, installers, etc., and this project
+seemed ideal, since the libraries/applications would be fairly small.
+I originally intended to create installable applications for Windows, Linux, and maybe Apple, 
+but never did, and I no longer will have the time.</p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<p>Below you will find a list of the completed libraries/applications.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h2>
+<a id="functionality" class="anchor" href="#functionality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functionality</h2>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<ul>
+<li>Be able to retrieve the name and URL of Windows, Linux, and Apple
+shortcuts.  Specifically these are files with the following extensions:
+.url, .website, .desktop, .webloc.</li>
+<li>Be able to create shortcut files given a name and URL.</li>
+<li>More details can be found in the library documentation.</li>
+</ul>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h2>
+<a id="application" class="anchor" href="#application" aria-hidden="true"><span class="octicon octicon-link"></span></a>Application</h2>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<h1>
+<a id="android-app---web-shortcut" class="anchor" href="#android-app---web-shortcut" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android App - Web Shortcut</h1>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>This is an Android app that allows you to launch and create shortcuts.</p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<ul>
+<li>Android Marketplace Page: </li>
+<li>Source code: <a href="https://github.com/abcodeworks/WebShortcut-Android/">https://github.com/abcodeworks/WebShortcut-Android/</a>
+</li>
+</ul>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h2>
+<a id="libraries" class="anchor" href="#libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Libraries</h2>
+
+<h1>
+<a id="java---webshortcututil" class="anchor" href="#java---webshortcututil" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java - WebShortcutUtil</h1>
+
+<p>This is a Java library.  It has also been tested on Android and
+appears to be completely compatible. The functionality and implementation
+is largely equivalent to the Java library.</p>
+
+<ul>
+<li>Source code: <a href="https://github.com/abcodeworks/WebShortcutUtil-Java/">https://github.com/abcodeworks/WebShortcutUtil-Java/</a>
+</li>
+<li>Maven Repository: </li>
+<li>Javadocs:  <a href="http://abcodeworks.github.io/WebShortcutUtil-Java/javadoc/latest/">http://abcodeworks.github.io/WebShortcutUtil-Java/javadoc/latest/</a>
+</li>
+</ul>
+
+<h1>
+<a id="perl---webshortcututil" class="anchor" href="#perl---webshortcututil" aria-hidden="true"><span class="octicon octicon-link"></span></a>Perl - WebShortcutUtil</h1>
+
+<p>This is a PERL library.  The functionality and implementation
+is largely equivalent to the Java library.</p>
+
+<ul>
+<li>Source code: <a href="https://github.com/beckus/WebShortcutUtil-Perl/">https://github.com/beckus/WebShortcutUtil-Perl/</a>
+</li>
+<li>CPAN module: <a href="http://search.cpan.org/%7Ebeckus/WebShortcutUtil/">http://search.cpan.org/~beckus/WebShortcutUtil/</a>
+</li>
+</ul>
+
+<h2>
+<a id="samples" class="anchor" href="#samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Samples</h2>
+
+<p>During development I collected a set of shortcuts from
+various operating systems (both to study and to use for
+unit tests).  I made these available in their own repository.</p>
+
+<ul>
+<li>Repository: <a href="https://github.com/beckus/WebShortcutSamples/">https://github.com/beckus/WebShortcutSamples/</a>
+</li>
+</ul>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p>Andre Beckus (<a href="https://github.com/beckus" class="user-mention">@beckus</a>)</p>
       </section>
     </div>
 
