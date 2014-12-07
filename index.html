@@ -20,32 +20,26 @@
 
           <h1 id="project_title">WebShortcutUtil</h1>
           <h2 id="project_tagline">Web Shortcut Utility Suite</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/beckus/WebShortcutUtil/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/beckus/WebShortcutUtil/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
+        <h1>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h1>
 
-<p>This is a suite of libraries and tools for working with web shortcuts.
-Web shortcuts are the files that are created by various operating systems when you save
-a link to a website.</p>
+<p>This is a suite of libraries and tools for working with web shortcuts. Web shortcuts are the files that are created by various operating systems when you save a link to a website.</p>
 
-<p>I have found myself using various operating systems over the years, and I also
-have been increasingly using cloud file services.  I sometimes work in one
-operating system, create a shortcut, put the shortcut on a cloud service, then try
-to open the shortcut in another operating system.  This generally does not work.
-There are workarounds such as opening the shortcuts with a text editor and copying the
-URL, or using link services such as Delicious.</p>
+<p>I have found myself using various operating systems over the years, and I have also increasingly used cloud file services.  I sometimes work in one operating system, create a shortcut, put the shortcut on a cloud service, then try to open the shortcut in another operating system.  This generally does not work.
+There are workarounds such as opening the shortcuts with a text editor and copying the URL, or using link services such as Delicious.</p>
 
-<p>I decided to try and create a set of applications and libraries that would allow you to
-open any shortcut regardless of which operating system you are using.  A major goal was
-to gain experience using various programming languages, installers, etc., and this project
-seemed ideal, since the libraries/applications would be fairly small.
-I originally intended to create installable applications for Windows, Linux, and maybe Apple, 
-but never did.  There is a lot of room for improvement, but I no longer will have the time.</p>
+<p>I decided to try and create a set of applications and libraries that would allow you to open any shortcut regardless of which operating system you are using.  Although I don't find this subject particularly exciting, I thought it would be a good way to gain experience using various programming languages, installers, etc..  This project seemed ideal, since the libraries/applications would be fairly small. I originally intended to create installable applications for Windows, Linux, and maybe Apple, but never did.  There is a lot of room for improvement, but I no longer will have the time.</p>
 
 <p>The functionality is as follows:</p>
 
@@ -59,57 +53,77 @@ shortcuts.  Specifically these are files with the following extensions:
 
 <p>Below you will find a list of the applications/libraries.</p>
 
-<h3>
-<a id="launcher-for-pcs" class="anchor" href="#launcher-for-pcs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Launcher for PCs</h3>
+<h1>
+<a id="launcher-for-pcs" class="anchor" href="#launcher-for-pcs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Launcher for PCs</h1>
 
-<p>This is a command line Java application that allows you to launch shortcuts on your PC.
-Unfortunately, due to differences in operating systems, it is difficult
-to open a browser reliably in Java.  Therefore, this application will not
-work on all operating systems or distributions.</p>
+<p>This is a command line Java application that allows you to launch shortcuts on your PC.  Unfortunately, due to differences in operating systems, it is difficult to open a browser reliably in Java.  Therefore, this application will not work on all operating systems or distributions.</p>
 
-<p>This Java application could be packaged into installers for the various
-operating systems, but I have no plans to do so.
-Instead, I have a wiki page with manual installation instructions, which
+<p>This Java application could be packaged into installers for the various operating systems, but I have no plans to do so. Instead, I have a wiki page with manual installation instructions, which
 are unfortunately cumbersome and incomplete.</p>
 
+<p>Known issues:</p>
+
 <ul>
+<li>The launcher does not work on some operating systems, for example Solaris.</li>
+<li>The launcher only works on Linux distributions that have the "xdg-open" command installed.</li>
+<li>The launcher does not appear to work on Windows with files with unicode characters (it gives
+a "file not found" error).</li>
+</ul>
+
+<p>Links:</p>
+
+<ul>
+<li>Latest JAR file: <a href="https://github.com/abcodeworks/LaunchWebShortcut-Java/releases/latest/">https://github.com/abcodeworks/LaunchWebShortcut-Java/releases/latest/</a>
+</li>
 <li>Installation wiki page: <a href="https://github.com/abcodeworks/LaunchWebShortcut-Java/wiki/Installing/">https://github.com/abcodeworks/LaunchWebShortcut-Java/wiki/Installing/</a>
 </li>
 <li>Source code: <a href="https://github.com/abcodeworks/LaunchWebShortcut-Java/">https://github.com/abcodeworks/LaunchWebShortcut-Java/</a>
 </li>
 </ul>
 
-<h3>
-<a id="android-app" class="anchor" href="#android-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android App</h3>
+<h1>
+<a id="android-app" class="anchor" href="#android-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android App</h1>
 
 <p>This is an Android app that allows you to launch and create shortcuts.</p>
 
+<p>Links:</p>
+
 <ul>
-<li>Android Marketplace Page: </li>
+<li>Android Marketplace Page: <a href="http://play.google.com/store/apps/details?id=com.abcodeworks.webshortcutapp">http://play.google.com/store/apps/details?id=com.abcodeworks.webshortcutapp</a>
+</li>
 <li>Source code: <a href="https://github.com/abcodeworks/WebShortcut-Android/">https://github.com/abcodeworks/WebShortcut-Android/</a>
 </li>
 </ul>
 
-<h3>
-<a id="java-library" class="anchor" href="#java-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java Library</h3>
+<h1>
+<a id="java-library" class="anchor" href="#java-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java Library</h1>
 
-<p>This library has been tested on Android and
-appears to be completely compatible. The functionality and implementation
-is largely equivalent to the Java library.</p>
+<p>A Java library intended for use in other Java applications.  It provides classes/methods for reading and writing shortcuts.  This library has been tested on Android and appears to be completely compatible. The functionality and implementation is largely equivalent to the Perl library.</p>
+
+<p>The library is published to the Maven repository.  Use the following dependency:
+    
+        com.abcodeworks
+        webshortcututil
+        1.0.0
+    </p>
+
+<p>Links:</p>
 
 <ul>
-<li>Source code: <a href="https://github.com/abcodeworks/WebShortcutUtil-Java/">https://github.com/abcodeworks/WebShortcutUtil-Java/</a>
+<li>Latest JAR file: <a href="https://github.com/abcodeworks/WebShortcutUtil-Java/releases/latest/">https://github.com/abcodeworks/WebShortcutUtil-Java/releases/latest/</a>
 </li>
-<li>Maven Repository: </li>
-<li>Javadocs:  <a href="http://abcodeworks.github.io/WebShortcutUtil-Java/javadoc/latest/">http://abcodeworks.github.io/WebShortcutUtil-Java/javadoc/latest/</a>
+<li>JavaDocs:  <a href="http://abcodeworks.github.io/WebShortcutUtil-Java/javadoc/latest/">http://abcodeworks.github.io/WebShortcutUtil-Java/javadoc/latest/</a>
+</li>
+<li>Source code: <a href="https://github.com/abcodeworks/WebShortcutUtil-Java/">https://github.com/abcodeworks/WebShortcutUtil-Java/</a>
 </li>
 </ul>
 
-<h3>
-<a id="perl-library" class="anchor" href="#perl-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Perl Library</h3>
+<h1>
+<a id="perl-library" class="anchor" href="#perl-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Perl Library</h1>
 
-<p>This is a PERL library.  The functionality and implementation
-is largely equivalent to the Java library.</p>
+<p>A Perl library that provides routines for reading and writing shortcuts.  The functionality and implementation is largely equivalent to the Java library.</p>
+
+<p>Links:</p>
 
 <ul>
 <li>Source code: <a href="https://github.com/beckus/WebShortcutUtil-Perl/">https://github.com/beckus/WebShortcutUtil-Perl/</a>
@@ -118,20 +132,21 @@ is largely equivalent to the Java library.</p>
 </li>
 </ul>
 
-<h3>
-<a id="samples" class="anchor" href="#samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Samples</h3>
+<h1>
+<a id="samples" class="anchor" href="#samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Samples</h1>
 
-<p>During development I collected a set of shortcuts from
-various operating systems (both to study and to use for
-unit tests).  I made these available in their own repository.</p>
+<p>During development I collected shortcuts from various operating systems (both to study and to use for
+unit tests).  I also manually created some examples for testing purposes.  I made these available in their own repository with the hope that they will be useful to other developers.</p>
+
+<p>Links:</p>
 
 <ul>
 <li>Repository: <a href="https://github.com/beckus/WebShortcutSamples/">https://github.com/beckus/WebShortcutSamples/</a>
 </li>
 </ul>
 
-<h3>
-<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h3>
+<h1>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h1>
 
 <p>Andre Beckus (<a href="https://github.com/beckus" class="user-mention">@beckus</a>)</p>
       </section>
