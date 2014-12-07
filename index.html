@@ -41,27 +41,29 @@ There are workarounds such as opening the shortcuts with a text editor and copyi
 
 <p>I decided to try and create a set of applications and libraries that would allow you to open any shortcut regardless of which operating system you are using.  Although I don't find this subject particularly exciting, I thought it would be a good way to gain experience using various programming languages, installers, etc..  This project seemed ideal, since the libraries/applications would be fairly small. I originally intended to create installable applications for Windows, Linux, and maybe Apple, but never did.  There is a lot of room for improvement, but I no longer will have the time.</p>
 
-<p>The functionality is as follows:</p>
+<h2>
+<a id="functionality" class="anchor" href="#functionality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functionality</h2>
 
 <ul>
-<li>Be able to retrieve the name and URL of Windows, Linux, and Apple
-shortcuts.  Specifically these are files with the following extensions:
-.url, .website, .desktop, .webloc.</li>
-<li>Be able to create shortcut files given a name and URL.</li>
+<li>Supports shortcut files for Windows, Linux, and Apple.  Specifically, these are files with the following extensions: .url, .website, .desktop, .webloc.</li>
+<li>Retrieves the name and URL from shortcut files.</li>
+<li>Creates shortcut files given a name and URL.</li>
 <li>More details can be found in the library documentation.</li>
 </ul>
 
-<p>Below you will find a list of the applications/libraries.</p>
-
 <h1>
-<a id="launcher-for-pcs" class="anchor" href="#launcher-for-pcs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Launcher for PCs</h1>
+<a id="applications-and-libraries" class="anchor" href="#applications-and-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Applications and Libraries</h1>
 
-<p>This is a command line Java application that allows you to launch shortcuts on your PC.  Unfortunately, due to differences in operating systems, it is difficult to open a browser reliably in Java.  Therefore, this application will not work on all operating systems or distributions.</p>
+<h2>
+<a id="java-launcher-for-pcs" class="anchor" href="#java-launcher-for-pcs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java Launcher for PCs</h2>
+
+<p>A command line Java application that allows you to launch shortcuts on your PC.  Unfortunately, due to differences in operating systems, it is difficult to open a browser reliably in Java.  Therefore, this application will not work on all operating systems or distributions.</p>
 
 <p>This Java application could be packaged into installers for the various operating systems, but I have no plans to do so. Instead, I have a wiki page with manual installation instructions, which
 are unfortunately cumbersome and incomplete.</p>
 
-<p>Known issues:</p>
+<h3>
+<a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Known issues</h3>
 
 <ul>
 <li>The launcher does not work on some operating systems, for example Solaris.</li>
@@ -70,7 +72,8 @@ are unfortunately cumbersome and incomplete.</p>
 a "file not found" error).</li>
 </ul>
 
-<p>Links:</p>
+<h3>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links</h3>
 
 <ul>
 <li>Latest JAR file: <a href="https://github.com/abcodeworks/LaunchWebShortcut-Java/releases/latest/">https://github.com/abcodeworks/LaunchWebShortcut-Java/releases/latest/</a>
@@ -81,12 +84,13 @@ a "file not found" error).</li>
 </li>
 </ul>
 
-<h1>
-<a id="android-app" class="anchor" href="#android-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android App</h1>
+<h2>
+<a id="android-app" class="anchor" href="#android-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android App</h2>
 
-<p>This is an Android app that allows you to launch and create shortcuts.</p>
+<p>An Android app that allows you to launch and create shortcuts.</p>
 
-<p>Links:</p>
+<h3>
+<a id="links-1" class="anchor" href="#links-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links</h3>
 
 <ul>
 <li>Android Marketplace Page: <a href="http://play.google.com/store/apps/details?id=com.abcodeworks.webshortcutapp">http://play.google.com/store/apps/details?id=com.abcodeworks.webshortcutapp</a>
@@ -95,8 +99,8 @@ a "file not found" error).</li>
 </li>
 </ul>
 
-<h1>
-<a id="java-library" class="anchor" href="#java-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java Library</h1>
+<h2>
+<a id="java-library" class="anchor" href="#java-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java Library</h2>
 
 <p>A Java library intended for use in other Java applications.  It provides classes/methods for reading and writing shortcuts.  This library has been tested on Android and appears to be completely compatible. The functionality and implementation is largely equivalent to the Perl library.</p>
 
@@ -107,7 +111,8 @@ a "file not found" error).</li>
         1.0.0
     </p>
 
-<p>Links:</p>
+<h3>
+<a id="links-2" class="anchor" href="#links-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links</h3>
 
 <ul>
 <li>Latest JAR file: <a href="https://github.com/abcodeworks/WebShortcutUtil-Java/releases/latest/">https://github.com/abcodeworks/WebShortcutUtil-Java/releases/latest/</a>
@@ -118,12 +123,13 @@ a "file not found" error).</li>
 </li>
 </ul>
 
-<h1>
-<a id="perl-library" class="anchor" href="#perl-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Perl Library</h1>
+<h2>
+<a id="perl-library" class="anchor" href="#perl-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Perl Library</h2>
 
 <p>A Perl library that provides routines for reading and writing shortcuts.  The functionality and implementation is largely equivalent to the Java library.</p>
 
-<p>Links:</p>
+<h3>
+<a id="links-3" class="anchor" href="#links-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links</h3>
 
 <ul>
 <li>Source code: <a href="https://github.com/beckus/WebShortcutUtil-Perl/">https://github.com/beckus/WebShortcutUtil-Perl/</a>
@@ -132,13 +138,14 @@ a "file not found" error).</li>
 </li>
 </ul>
 
-<h1>
-<a id="samples" class="anchor" href="#samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Samples</h1>
+<h2>
+<a id="samples" class="anchor" href="#samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Samples</h2>
 
 <p>During development I collected shortcuts from various operating systems (both to study and to use for
 unit tests).  I also manually created some examples for testing purposes.  I made these available in their own repository with the hope that they will be useful to other developers.</p>
 
-<p>Links:</p>
+<h3>
+<a id="links-4" class="anchor" href="#links-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links</h3>
 
 <ul>
 <li>Repository: <a href="https://github.com/beckus/WebShortcutSamples/">https://github.com/beckus/WebShortcutSamples/</a>
