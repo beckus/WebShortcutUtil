@@ -25,6 +25,13 @@
       <mkdir dir="final"/>
       <mkdir dir="final/linux"/>
       <mkdir dir="final/windows"/>
+      <mkdir dir="final/android"/>
+      <mkdir dir="final/android/res"/>
+      <mkdir dir="final/android/res/drawable-xxhdpi"/>
+      <mkdir dir="final/android/res/drawable-xhdpi"/>
+      <mkdir dir="final/android/res/drawable-hdpi"/>
+      <mkdir dir="final/android/res/drawable-mdpi"/>
+      <mkdir dir="final/web"/>
   </target>
 
   
@@ -112,7 +119,7 @@
 	   supposed to be a 24-bit PNG.  Do we need to do further
 	   conversions to achieve this???  See:
 	   https://support.google.com/googleplay/android-developer/answer/1078870?hl=en -->
-  <target name="ic_launcher-feature" depends="webshortcut_cropped_png">
+  <target name="ic_launcher-feature" depends="webshortcut_cropped_png, final_dir">
     <sequential>
       <exec executable="convert">
         <arg value="tmp/webshortcut_cropped.png"/>
@@ -124,43 +131,43 @@
         <arg value="center"/>
         <arg value="-extent"/>
         <arg value="1024x500"/>      	
-        <arg value="../ic_launcher-feature.png"/>
+        <arg value="final/android/ic_launcher-feature.png"/>
 	  </exec>
       <exec executable="optipng">
-        <arg value="../ic_launcher-feature.png" />
+        <arg value="final/android/ic_launcher-feature.png" />
       </exec>
 	</sequential>
   </target>
 	
   
   <!-- Create the various icon sizes needed for the Android app. -->
-  <target name="ic_launcher-web" depends="webshortcut_cropped_png">
+  <target name="ic_launcher-web" depends="webshortcut_cropped_png, final_dir">
       <resize_and_optimize src-filename="tmp/webshortcut_cropped.png"
-                           new-filename="../ic_launcher-web.png"
+                           new-filename="final/android/ic_launcher-web.png"
                            new-size="512" />
   </target>
 
-  <target name="xxhdpi_ic_launcher" depends="webshortcut_cropped_png">
+  <target name="xxhdpi_ic_launcher" depends="webshortcut_cropped_png, final_dir">
       <resize_and_optimize src-filename="tmp/webshortcut_cropped.png"
-                           new-filename="../res/drawable-xxhdpi/ic_launcher.png"
+                           new-filename="final/android/res/drawable-xxhdpi/ic_launcher.png"
                new-size="144" />
   </target>
 	
-  <target name="xhdpi_ic_launcher" depends="webshortcut_cropped_png">
+  <target name="xhdpi_ic_launcher" depends="webshortcut_cropped_png, final_dir">
       <resize_and_optimize src-filename="tmp/webshortcut_cropped.png"
-                           new-filename="../res/drawable-xhdpi/ic_launcher.png"
+                           new-filename="final/android/res/drawable-xhdpi/ic_launcher.png"
 			   new-size="96" />
   </target>
 
-  <target name="hdpi_ic_launcher" depends="webshortcut_cropped_png">
+  <target name="hdpi_ic_launcher" depends="webshortcut_cropped_png, final_dir">
       <resize_and_optimize src-filename="tmp/webshortcut_cropped.png"
-                           new-filename="../res/drawable-hdpi/ic_launcher.png"
+                           new-filename="final/android/res/drawable-hdpi/ic_launcher.png"
 			   new-size="72" />
   </target>
 
-  <target name="mdpi_ic_launcher" depends="webshortcut_cropped_png">
+  <target name="mdpi_ic_launcher" depends="webshortcut_cropped_png, final_dir">
       <resize_and_optimize src-filename="tmp/webshortcut_cropped.png"
-                           new-filename="../res/drawable-mdpi/ic_launcher.png"
+                           new-filename="final/android/res/drawable-mdpi/ic_launcher.png"
 			   new-size="48" />
   </target>
   
@@ -201,7 +208,7 @@
   </target>
   
   <!-- Builds the Windows ICO file. -->
-  <target name="windows_ico" depends="windows_16, windows_32, windows_48, windows_64, windows_128">
+  <target name="windows_ico" depends="windows_16, windows_32, windows_48, windows_64, windows_128, final_dir">
     <exec executable="convert">
       <arg value="tmp/windows_16.png"/>
       <arg value="tmp/windows_32.png"/>
@@ -212,10 +219,32 @@
     </exec>
   </target>
 
+
+
+  <target name="web_favicon_192" depends="webshortcut_cropped_png">
+      <resize_and_optimize src-filename="tmp/webshortcut_cropped.png"
+                           new-filename="final/web/favicon192.png"
+			   new-size="192" />
+  </target>
+
+  <target name="web_favicon_32" depends="webshortcut_cropped_png">
+      <resize_and_optimize src-filename="tmp/webshortcut_cropped.png"
+                           new-filename="final/web/favicon32.png"
+			   new-size="32" />
+  </target>
+
+  <target name="web_favicon_16" depends="webshortcut_cropped_png">
+      <resize_and_optimize src-filename="tmp/webshortcut_cropped.png"
+                           new-filename="final/web/favicon16.png"
+			   new-size="16" />
+  </target>
+
+  <target name="web" depends="web_favicon_192, web_favicon_32, web_favicon_16"/>
+
   
   
   <!-- The default target which builds all of the required icons -->
-  <target name="all_icons" depends="linux_webshortcut_svg, all_ic_launchers, windows_ico"/>
+  <target name="all_icons" depends="linux_webshortcut_svg, all_ic_launchers, windows_ico, web"/>
     
   <target name="clean">
       <delete dir="tmp"/>
